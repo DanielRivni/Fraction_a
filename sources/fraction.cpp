@@ -18,34 +18,34 @@ Fraction Fraction::operator+(Fraction fraction1) const
     return Fraction(0, 1);
 }
 
-float Fraction::operator+(float fraction1) const
+Fraction Fraction::operator+(float fraction1) const
 {
-    return 0;
+    return Fraction(0, 1);
 }
 
 Fraction Fraction::operator-(Fraction fraction1) const
 {
     return Fraction(0, 1);
 }
-float Fraction::operator-(float fraction1) const
+Fraction Fraction::operator-(float fraction1) const
 {
-    return 0;
+    return Fraction(0, 1);
 }
 Fraction Fraction::operator*(Fraction fraction1) const
 {
     return Fraction(0, 1);
 }
-float Fraction::operator*(float fraction1) const
+Fraction Fraction::operator*(float fraction1) const
 {
-    return 0;
+    return Fraction(0, 1);
 }
 Fraction Fraction::operator/(Fraction fraction1) const
 {
     return Fraction(0, 1);
 }
-float Fraction::operator/(float fraction1) const
+Fraction Fraction::operator/(float fraction1) const
 {
-    return 0;
+    return Fraction(0, 1);
 }
 bool Fraction::operator==(Fraction fraction1) const
 {
@@ -116,21 +116,21 @@ istream &operator>>(istream &istream, const Fraction &fraction)
     return istream;
 }
 
-float ariel::operator+(float fraction1, Fraction fraction2)
+Fraction ariel::operator+(float fraction1, Fraction fraction2)
 {
-    return 0;
+    return Fraction(0, 1);
 }
-float ariel::operator-(float fraction1, Fraction fraction2)
+Fraction ariel::operator-(float fraction1, Fraction fraction2)
 {
-    return 0;
+    return Fraction(0, 1);
 }
-float ariel::operator*(float fraction1, Fraction fraction2)
+Fraction ariel::operator*(float fraction1, Fraction fraction2)
 {
-    return 0;
+    return Fraction(0, 1);
 }
-float ariel::operator/(float fraction1, Fraction fraction2)
+Fraction ariel::operator/(float fraction1, Fraction fraction2)
 {
-    return 0;
+    return Fraction(0, 1);
 }
 bool ariel::operator==(float fraction1, Fraction fraction2)
 {

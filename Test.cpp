@@ -26,16 +26,31 @@ TEST_CASE("Some Tests on Fraction and float")
 {
     Fraction f1(5, 18);
     float f2 = 1.234;
-    CHECK(f1 + f2 == 1.511);
-    CHECK(f1 - f2 == -0.956);
-    CHECK(f1 * f2 == 0.342);
-    CHECK(f1 / f2 == 0.225);
+    CHECK(f1 + f2 == Fraction(1511, 1000));
+    CHECK(f1 - f2 == Fraction(-4303, 4500));
+    CHECK(f1 * f2 == Fraction(617, 1800));
+    CHECK(f1 / f2 == Fraction(1250, 5553));
     CHECK(!(f1 == f2));
     CHECK(!(f1 > f2));
     CHECK(f1 < f2);
     CHECK((f1++) == Fraction(23, 18));
-    CHECK((f2++) == 2.234);
-    CHECK(--f1 + f2 == 0.511);
+    CHECK((f2++) == Fraction(1117, 500));
+    CHECK(--f1 + f2 == Fraction(511, 1000));
+}
+TEST_CASE("Some Tests on float and Fraction")
+{
+    float f1 = 1.234;
+    Fraction f2(5, 18);
+    CHECK(f1 + f2 == Fraction(1511, 1000));
+    CHECK(f1 - f2 == Fraction(4303, 4500));
+    CHECK(f1 * f2 == Fraction(617, 1800));
+    CHECK(f1 / f2 == Fraction(5553, 1250));
+    CHECK(!(f1 == f2));
+    CHECK(f1 > f2);
+    CHECK(!(f1 < f2));
+    CHECK((f1++) == Fraction(1117, 500));
+    CHECK((f2++) == Fraction(23, 18));
+    CHECK(--f1 + f2 == Fraction(2303, 4500));
 }
 TEST_CASE("test Equality")
 {
