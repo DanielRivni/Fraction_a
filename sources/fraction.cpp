@@ -8,6 +8,7 @@ Fraction::Fraction()
     this->numerator = 0;
     this->denominator = 1;
 }
+
 Fraction::Fraction(int numerator, int denominator)
 {
     if (denominator == 0)
